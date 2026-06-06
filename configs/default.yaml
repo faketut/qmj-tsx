@@ -1,0 +1,62 @@
+# Default configuration for the QMJ-TSX pipeline.
+# All paths are resolved relative to the repo root.
+
+paths:
+  data_raw: data/raw
+  data_interim: data/interim
+  data_processed: data/processed
+  paper: paper
+
+sample:
+  start: "2010-01-01"
+  end: "2025-12-31"
+
+universe:
+  # Curated TSX small/mid-cap CSV bundled in the repo. Edit there to extend.
+  csv: data/raw/universe/tsx_smallcap.csv
+  # Phase 0 / Phase 1 seed tickers (large-cap TSX), used when csv is absent
+  # or when --seed-only is passed to `qmj data prices`.
+  seed_tickers:
+    - RY.TO     # Royal Bank
+    - TD.TO     # TD Bank
+    - BNS.TO    # Scotiabank
+    - ENB.TO    # Enbridge
+    - CNR.TO    # CN Rail
+    - SU.TO     # Suncor
+    - BCE.TO    # BCE
+    - T.TO      # Telus
+    - MFC.TO    # Manulife
+    - SHOP.TO   # Shopify
+  liquidity:
+    min_avg_daily_dollar_vol_cad: 100000
+    lookback_days: 63
+  size:
+    small_cap_pct_cutoff: 0.30  # bottom 30% by market cap
+
+signals:
+  paper_q:
+    idio_vol_window_months: 12
+    beta_window_months: 60
+    drawdown_window_months: 36
+    sharpe_window_months: 24
+    components: [idio_vol, beta, max_drawdown, rolling_sharpe, downside_semi_dev]
+
+portfolio:
+  rebalance: "M"            # month-end
+  weighting: "value"        # 'value' or 'equal'
+  n_buckets: 3              # tercile sorts
+  long_bucket: 3
+  short_bucket: 1
+  costs_bps_round_trip: 10
+
+stats:
+  newey_west_lags: 6
+
+benchmarks:
+  aqr:
+    qmj_xlsx: "Quality Minus Junk Factors Monthly.xlsx"
+    bab_xlsx: "Betting Against Beta Equity Factors Monthly.xlsx"
+    country: "CAN"
+  ken_french:
+    factors: "Developed_5_Factors"
+    momentum: "Developed_Mom_Factor"

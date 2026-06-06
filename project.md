@@ -1,0 +1,3 @@
+Reproducible quant paper with novel result**
+Replicate + extend a top-journal anomaly (JFE / RFS / JF). Public LaTeX paper + open code + out-of-sample test. Even one publishable finding beats every other résumé line you have. Example: extending Asness "Quality Minus Junk" to small-cap Canadian universe, or testing Bouchaud's order-flow imbalance signal on a new exchange.
+> *Working paper: extends Asness QMJ to TSX small-caps; long-short portfolio returns 9.1% annualized, 1.6 Sharpe, 2015–2025; preprint + reproducible Python notebook on GitHub.*

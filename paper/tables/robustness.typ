@@ -1,0 +1,20 @@
+#figure(
+  table(
+    columns: 9,
+    align: (left, center, left, right, right, right, right, right, right),
+    [*Weighting*], [*Buckets*], [*Subperiod*], [*N*], [*Ann. vol*], [*Avg TO*], [*0 bps*], [*10 bps*], [*25 bps*],
+  [equal], [3], [full], [168], [51.8%], [7.4%], [-0.33], [-0.33], [-0.33],
+  [equal], [3], [post-COVID], [69], [24.8%], [7.4%], [-0.89], [-0.89], [-0.90],
+  [equal], [3], [pre-COVID], [99], [64.3%], [7.4%], [-0.21], [-0.21], [-0.21],
+  [equal], [5], [full], [167], [83.5%], [10.3%], [-0.31], [-0.31], [-0.32],
+  [equal], [5], [post-COVID], [69], [31.3%], [10.3%], [-0.80], [-0.80], [-0.81],
+  [equal], [5], [pre-COVID], [98], [106.1%], [10.3%], [-0.25], [-0.26], [-0.26],
+  [value], [3], [full], [168], [30.6%], [7.4%], [+0.03], [+0.03], [+0.02],
+  [value], [3], [post-COVID], [69], [30.2%], [7.4%], [-0.60], [-0.60], [-0.60],
+  [value], [3], [pre-COVID], [99], [30.4%], [7.4%], [+0.47], [+0.47], [+0.46],
+  [value], [5], [full], [167], [40.6%], [10.3%], [+0.08], [+0.07], [+0.07],
+  [value], [5], [post-COVID], [69], [41.6%], [10.3%], [-0.42], [-0.42], [-0.42],
+  [value], [5], [pre-COVID], [98], [39.5%], [10.3%], [+0.44], [+0.44], [+0.43],
+  ),
+  caption: [Net Sharpe ratios for the paper-Q long–short across weighting, bucket count, subperiod, and round-trip cost.],
+) <tab:robustness>

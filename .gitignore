@@ -1,0 +1,31 @@
+# Byte-compiled
+__pycache__/
+*.pyc
+*.pyo
+
+# Environments
+.venv/
+.env
+
+# Caches
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Data — keep small lookups, ignore the rest
+data/raw/prices/
+data/raw/fred/
+data/raw/ken_french/
+data/interim/
+data/processed/
+!data/raw/aqr/
+!data/raw/universe/
+
+# Paper build artefacts
+paper/main.pdf
+
+# OS
+.DS_Store
+
+# Secrets / local TLS bundles
+.secrets/

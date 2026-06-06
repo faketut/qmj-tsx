@@ -1,0 +1,142 @@
+# TSX small/mid-cap candidate universe — manually curated June 2026.
+#
+# Selection criteria (best-effort, free-data constrained):
+#   * Listed on TSX or TSXV with a Yahoo Finance symbol ending in .TO
+#   * Outside the S&P/TSX 60 mega-caps (some bleed into the bottom of the 60 are
+#     left in for the size-bucket cross-section to operate on)
+#   * Spans the GICS sector spectrum (financials, energy, materials/mining,
+#     industrials, tech, REITs, consumer, utilities, telecoms, healthcare)
+#
+# Survivorship caveat: this list reflects names live in 2026; delistings prior
+# to that are missing. The paper discusses the resulting upward bias explicitly.
+#
+# Refresh procedure: see src/qmj_tsx/data/universe.py for the loader and the
+# `qmj data universe` CLI command. To extend, append a row and rerun
+# `qmj data prices`.
+ticker,sector
+# --- Financials (smaller banks, asset mgmt, insurance) ---
+EQB.TO,Financials
+CWB.TO,Financials
+LB.TO,Financials
+FN.TO,Financials
+IGM.TO,Financials
+ONEX.TO,Financials
+CIX.TO,Financials
+AGF-B.TO,Financials
+GCG.TO,Financials
+GS.TO,Financials
+ECN.TO,Financials
+GSY.TO,Financials
+# --- Energy E&P / services ---
+ARX.TO,Energy
+TOU.TO,Energy
+WCP.TO,Energy
+CPG.TO,Energy
+MEG.TO,Energy
+BTE.TO,Energy
+PXT.TO,Energy
+FRU.TO,Energy
+PEY.TO,Energy
+NVA.TO,Energy
+BIR.TO,Energy
+ATH.TO,Energy
+ERF.TO,Energy
+VET.TO,Energy
+TVE.TO,Energy
+IPCO.TO,Energy
+OBE.TO,Energy
+ESI.TO,Energy
+PSI.TO,Energy
+PD.TO,Energy
+# --- Mining: gold ---
+K.TO,Materials
+IMG.TO,Materials
+OGC.TO,Materials
+EDV.TO,Materials
+EQX.TO,Materials
+NGD.TO,Materials
+LUG.TO,Materials
+OR.TO,Materials
+TXG.TO,Materials
+PAAS.TO,Materials
+BTO.TO,Materials
+CGAU.TO,Materials
+# --- Mining: base metals / diversified ---
+HBM.TO,Materials
+CS.TO,Materials
+LUN.TO,Materials
+TKO.TO,Materials
+IVN.TO,Materials
+ERO.TO,Materials
+NEXA.TO,Materials
+SJ.TO,Materials
+# --- Industrials ---
+WJX.TO,Industrials
+TIH.TO,Industrials
+FTT.TO,Industrials
+STN.TO,Industrials
+WSP.TO,Industrials
+BDT.TO,Industrials
+MTL.TO,Industrials
+BLX.TO,Industrials
+CAE.TO,Industrials
+HPS-A.TO,Industrials
+EIF.TO,Industrials
+NWC.TO,Industrials
+ADW-A.TO,Industrials
+# --- Tech ---
+KXS.TO,InformationTechnology
+DSG.TO,InformationTechnology
+ENGH.TO,InformationTechnology
+DCBO.TO,InformationTechnology
+NVEI.TO,InformationTechnology
+LSPD.TO,InformationTechnology
+CLS.TO,InformationTechnology
+ALYA.TO,InformationTechnology
+BB.TO,InformationTechnology
+AI.TO,InformationTechnology
+# --- Consumer discretionary / staples ---
+GIL.TO,ConsumerDiscretionary
+DOL.TO,ConsumerDiscretionary
+MTY.TO,ConsumerDiscretionary
+RECP.TO,ConsumerStaples
+SAP.TO,ConsumerStaples
+AW-UN.TO,ConsumerDiscretionary
+PZA.TO,ConsumerDiscretionary
+BU.TO,ConsumerStaples
+RCH.TO,ConsumerDiscretionary
+GOOS.TO,ConsumerDiscretionary
+ATZ.TO,ConsumerDiscretionary
+LNF.TO,ConsumerDiscretionary
+# --- Real Estate (REITs) ---
+REI-UN.TO,RealEstate
+HR-UN.TO,RealEstate
+AP-UN.TO,RealEstate
+FCR-UN.TO,RealEstate
+CAR-UN.TO,RealEstate
+CSH-UN.TO,RealEstate
+CHP-UN.TO,RealEstate
+NWH-UN.TO,RealEstate
+GRT-UN.TO,RealEstate
+IIP-UN.TO,RealEstate
+SRU-UN.TO,RealEstate
+MRT-UN.TO,RealEstate
+# --- Utilities / IPPs ---
+CPX.TO,Utilities
+TA.TO,Utilities
+INE.TO,Utilities
+BEPC.TO,Utilities
+NPI.TO,Utilities
+ACO-X.TO,Utilities
+# --- Healthcare ---
+BHC.TO,HealthCare
+EXE.TO,HealthCare
+CHE-UN.TO,HealthCare
+WEED.TO,HealthCare
+ACB.TO,HealthCare
+CRON.TO,HealthCare
+# --- Communications (smaller) ---
+QBR-B.TO,CommunicationServices
+CCA.TO,CommunicationServices
+RCI-B.TO,CommunicationServices
+CGY.TO,CommunicationServices
